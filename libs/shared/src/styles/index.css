@@ -1,0 +1,95 @@
+/* Shared Simple Card Styles */
+.simple-card {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f7fa;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.simple-card .header {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  margin-bottom: 20px;
+  gap: 1rem;
+}
+
+.simple-card .header h1 {
+  font-size: 1.8rem;
+  margin: 0px;
+  color: #333;
+}
+
+.simple-card .header p {
+  color: #666;
+  margin: 0;
+}
+
+.simple-card .logo {
+  width: 40px;
+  height: 40px;
+}
+
+.simple-card .content {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.simple-card .content h2 {
+  margin-bottom: 16px;
+  font-size: 1.5rem;
+  color: #444;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 8px;
+}
+
+.simple-card table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.simple-card table thead th {
+  text-align: left;
+  padding: 8px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  font-weight: bold;
+}
+
+.simple-card table tbody td {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
+
+.simple-card table tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+.simple-card .btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.simple-card .btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.simple-card .btn:not(:disabled):hover {
+  background-color: #0056b3;
+}

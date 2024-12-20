@@ -1,0 +1,26 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "esnext",
+    "module": "esnext",
+    "lib": ["esnext", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@micro-frontends/shared": ["libs/shared/src/index.ts"],
+      "@micro-frontends/shared-styles": ["libs/shared/src/styles/index.css"],
+      "budget/Module": ["apps/budget/src/bootstrap.ts"],
+      "cart/Module": ["apps/cart/src/bootstrap.ts"],
+      "products/Module": ["apps/products/src/bootstrap.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}
