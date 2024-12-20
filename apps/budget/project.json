@@ -1,0 +1,32 @@
+{
+  "name": "budget",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/budget/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/budget",
+        "index": "apps/budget/src/index.html",
+        "main": "apps/budget/src/main.ts",
+        "tsConfig": "apps/budget/tsconfig.app.json",
+        "assets": ["apps/budget/src/favicon.ico", "apps/budget/src/assets"],
+        "styles": ["apps/budget/src/styles.css"],
+        "webpackConfig": "apps/budget/webpack.config.ts"
+      }
+    },
+    "serve": {
+      "executor": "@nx/webpack:dev-server",
+      "options": {
+        "buildTarget": "budget:build",
+        "port": 4203
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint"
+    }
+  }
+}

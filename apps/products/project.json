@@ -1,0 +1,32 @@
+{
+  "name": "products",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/products/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/webpack:webpack",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/products",
+        "index": "apps/products/src/index.html",
+        "main": "apps/products/src/main.ts",
+        "tsConfig": "apps/products/tsconfig.app.json",
+        "assets": ["apps/products/src/favicon.ico", "apps/products/src/assets"],
+        "styles": ["apps/products/src/styles.css"],
+        "webpackConfig": "apps/products/webpack.config.ts"
+      }
+    },
+    "serve": {
+      "executor": "@nx/webpack:dev-server",
+      "options": {
+        "buildTarget": "products:build",
+        "port": 4202
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint"
+    }
+  }
+}
